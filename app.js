@@ -12,9 +12,7 @@ app.use(cors());
 
 // MongoDB connection (use environment variable or default to localhost)
 // MongoDB connection (use environment variable or default to localhost)
-const mongoURI =
-  process.env.MONGODB_URI ||
-  "mongodb+srv://tshedzamudau759:r1HhPNSNQ6Q6YFih@cluster0.irf6l.mongodb.net/resumeDB?retryWrites=true&w=majority";
+const mongoURI =  "mongodb+srv://tshedzamudau759:r1HhPNSNQ6Q6YFih@cluster0.irf6l.mongodb.net/resumeDB?retryWrites=true&w=majority";
 mongoose
   .connect(mongoURI, {
     serverSelectionTimeoutMS: 20000, // Increase the timeout to 20 seconds

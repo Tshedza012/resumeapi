@@ -9,6 +9,10 @@ const {
 } = require("./../schema/Schema");
 const router = express.Router();
 
+router.get("/", (req, res) => {
+  res.send("Hello Resume");
+});
+
 // Route to save personal info
 router.put("/savePersonalInfo/:resumeId", async (req, res) => {
   const { resumeId } = req.params;
