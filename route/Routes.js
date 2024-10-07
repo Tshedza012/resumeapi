@@ -9,12 +9,6 @@ const {
 } = require("./../schema/Schema");
 const router = express.Router();
 
-/* want to make something which uniquly identifies someone resume 
-   i thought of making an identifier which i will have to be saved in the sessionStorage at the end when i am downloading the resume
-   but the problem is how will i distinguish the data i was uploading in the db for a specific resume because there is no auth needed but there should be a distinguisher
-   or mybe create a resume id which is available in the system but not visible
-*/
-
 // Route to save personal info
 router.put("/savePersonalInfo/:resumeId", async (req, res) => {
   const { resumeId } = req.params;
