@@ -11,8 +11,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // MongoDB connection (use environment variable or default to localhost)
+// MongoDB connection (use environment variable or default to localhost)
 const mongoURI =
-  process.env.MONGODB_URI || "mongodb://localhost:27017/resumeDB";
+  process.env.MONGODB_URI ||
+  "mongodb+srv://tshedzamudau759:r1HhPNSNQ6Q6YFih@cluster0.irf6l.mongodb.net/resumeDB?retryWrites=true&w=majority";
 mongoose
   .connect(mongoURI)
   .then(() => {
